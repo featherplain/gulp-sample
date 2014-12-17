@@ -5,6 +5,7 @@
 /* ======================================= */
 
 .l-header {
+	@extend %baseWidth;
 	h1 {
 		color: $colorBase;
 	}

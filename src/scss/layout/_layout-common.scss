@@ -5,6 +5,15 @@
 /* ======================================= */
 
 .l-container {
-	width: $maxWidth;
-	margin: 0 auto;
+	@extend %baseWidth;
+}
+
+.red-star {
+	@include sprite($icon_star-red);
+}
+.yellow-star {
+	@include sprite($icon_star-yellow);
+}
+.blue-star {
+	@include sprite($icon_star-blue);
 }

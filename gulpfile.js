@@ -25,7 +25,7 @@ var paths = {
   'htmlFiles' : './*.html',
 // images
   'imgDest'   : 'dist/img',
-  'imgDir'    : 'src/img/',
+  'imgDir'    : 'src/img',
 // js
   'jsFiles'   : 'src/js/**/*.js',
   'jsDest'    : 'dist/js',
@@ -70,10 +70,11 @@ gulp.task('bs-reload', function() {
 gulp.task('sprite', function() {
   var spriteData = gulp.src(paths.imgDir + '/sprite/*.png')
   .pipe(sprite({
-    imgName: paths.imgDest + '/sprite.png',
+    imgName: 'sprite.png',
+    imgPath: '/' + paths.imgDest + '/sprite.png',
     cssName: '_module-sprite.scss'
   }));
-  spriteData.img.pipe(gulp.dest('./'));
+  spriteData.img.pipe(gulp.dest(paths.imgDest));
   spriteData.css.pipe(gulp.dest(paths.scssDest + '/module'));
 });
 

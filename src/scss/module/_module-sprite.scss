@@ -16,8 +16,8 @@ $icon_star-red-width: 45px;
 $icon_star-red-height: 43px;
 $icon_star-red-total-width: 90px;
 $icon_star-red-total-height: 86px;
-$icon_star-red-image: 'dist/img/sprite.png';
-$icon_star-red: 0px 0px 0px 0px 45px 43px 90px 86px 'dist/img/sprite.png';
+$icon_star-red-image: '/dist/img/sprite.png';
+$icon_star-red: 0px 0px 0px 0px 45px 43px 90px 86px '/dist/img/sprite.png';
 $icon_star-yellow-x: 45px;
 $icon_star-yellow-y: 0px;
 $icon_star-yellow-offset-x: -45px;
@@ -26,8 +26,8 @@ $icon_star-yellow-width: 45px;
 $icon_star-yellow-height: 43px;
 $icon_star-yellow-total-width: 90px;
 $icon_star-yellow-total-height: 86px;
-$icon_star-yellow-image: 'dist/img/sprite.png';
-$icon_star-yellow: 45px 0px -45px 0px 45px 43px 90px 86px 'dist/img/sprite.png';
+$icon_star-yellow-image: '/dist/img/sprite.png';
+$icon_star-yellow: 45px 0px -45px 0px 45px 43px 90px 86px '/dist/img/sprite.png';
 $icon_star_blue-x: 0px;
 $icon_star_blue-y: 43px;
 $icon_star_blue-offset-x: 0px;
@@ -36,8 +36,8 @@ $icon_star_blue-width: 45px;
 $icon_star_blue-height: 43px;
 $icon_star_blue-total-width: 90px;
 $icon_star_blue-total-height: 86px;
-$icon_star_blue-image: 'dist/img/sprite.png';
-$icon_star_blue: 0px 43px 0px -43px 45px 43px 90px 86px 'dist/img/sprite.png';
+$icon_star_blue-image: '/dist/img/sprite.png';
+$icon_star_blue: 0px 43px 0px -43px 45px 43px 90px 86px '/dist/img/sprite.png';
 
 /*
 The provided mixins are intended to be used with the array-like variables
