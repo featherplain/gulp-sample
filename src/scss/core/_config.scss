@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+// color
+$colorBase: #555555;
+$colorSub: #dedede;
+$colorLink: #555555;
+$colorLinkHover: lighten($colorLink, 20%);
+
+// path
+$imgPath: "dist/img/";
+
+// column width
+$maxWidth: 960px;
+
+// font-family
+$fontFamily : "Helvetica Neue", "Helvetica", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック","MS PGothic",Arial,Sans-Serif;
