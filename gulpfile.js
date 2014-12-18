@@ -20,6 +20,8 @@ var gulp         = require('gulp'),
 
 var paths = {
   'dest'      : './',
+  'vhost'     : 'example.dev',
+  'port'      : 3000,
 // html
   'htmlDest'  : './',
   'htmlFiles' : './*.html',
