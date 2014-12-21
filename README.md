@@ -3,14 +3,14 @@ gulp-sample
 
 ## Outline
 
-This gulpfile.js is for :
+This gulpfile is sample of this article : [http://office7f.com/2014/12/19/megumi201412/](http://office7f.com/2014/12/19/megumi201412/)
 
 * compile sass to css (+ sass-globbing option)
 * combine js files and minify
 * generate css sprite
 * Browser-Sync support
 
-## Require
+## Requires
 
 * Node.js
 * npm
@@ -20,6 +20,7 @@ This gulpfile.js is for :
 
 ## File structure
 
+Basically source file placed in `src/`. It passed to `dist/` as destination through the "gulp".
 ~~~~
 .
 ├── README.md
@@ -78,10 +79,6 @@ This gulpfile.js is for :
 
 		$ gulp
 
-    or
-
-		$ npm start
-
 
 ### autoprefix
 
@@ -94,18 +91,19 @@ You'd like to autoprefix specific browsers, open gulpfile and edit `.pipe(autopr
 reference : [https://github.com/postcss/autoprefixer](https://github.com/postcss/autoprefixer)
 
 
-### for WordPress
+### Connect with local server
 
-If you'd like to use for WordPress development :
+If you'd like to connect "brower-sync" with local server, edit `gulpfile.js`.
 
-1. Set proxy url on line 23.
+1. Set hostname on line 23.
 
 >
 	'vhost': 'example.dev'
 
-2. Uncomment below these lines in gulpfile.
+2. Uncomment below these lines.
 
 >
+	// Local server
 	// gulp.task('browser-sync', function() {
 	// 		browserSync({
 	// 			proxy: paths.vhost,
