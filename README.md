@@ -97,16 +97,16 @@ If you'd like to connect "brower-sync" with local server, edit `gulpfile.js`.
 
 1. Set hostname on line 23.
 
->
-	'vhost': 'example.dev'
+	>
+		'vhost': 'example.dev'
 
 2. Uncomment below these lines.
 
->
-	// Local server
-	// gulp.task('browser-sync', function() {
-	// 		browserSync({
-	// 			proxy: paths.vhost,
-	// 			open: 'external'
-	// 		});
-	// });
+	>
+		// Local server
+		// gulp.task('browser-sync', function() {
+		// 		browserSync({
+		// 			proxy: paths.vhost,
+		// 			open: 'external'
+		// 		});
+		// });
