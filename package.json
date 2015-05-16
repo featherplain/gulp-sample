@@ -16,7 +16,7 @@
     "gulp-plumber": "latest",
     "gulp-prettify": "latest",
     "gulp-rename": "latest",
-    "gulp-ruby-sass": "latest",
+    "gulp-ruby-sass": "0.7.0",
     "gulp.spritesmith": "latest",
     "gulp-uglify": "latest"
   }
