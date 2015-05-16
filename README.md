@@ -1,16 +1,22 @@
 gulp-sample
 ============
 
-## Outline
+## gulp-sample について
 
-This gulpfile is sample of this article : [http://office7f.com/2014/12/19/megumi201412/](http://office7f.com/2014/12/19/megumi201412/)
+[English](https://github.com/featherplain/gulp-sample/blob/master/en-README.md)
 
-* compile sass to css (+ sass-globbing option)
-* combine js files and minify
-* generate css sprite
-* Browser-Sync support
+gulp-sample は[ビルドシステム gulp を試してみる【すぐに動かせるサンプル付き】](http://office7f.com/2014/12/19/megumi201412/)におけるサンプル用の gulpfile.js です。
 
-## Requires
+この gulpfile.js では以下のことができます。
+
+- Sass を CSS にコンパイルする(sass-globbing オプション必須)
+- JS ファイルの結合と圧縮
+- CSS スプライト画像の生成
+- BrowserSync でブラウザのライブリロード
+
+この gulpfile.js では gulp-ruby-sass を採用していますが、最新版ではありません。`package.json` にてバージョンを 0.7.0 に固定しています。
+
+## 必要なもの
 
 * Node.js
 * npm
@@ -18,9 +24,10 @@ This gulpfile is sample of this article : [http://office7f.com/2014/12/19/megumi
 * Sass over3.1
 * sass-globbing
 
-## File structure
+## ディレクトリ構造
 
-Basically source file placed in `src/`. It passed to `dist/` as destination through the "gulp".
+編集用のファイルは `src` ディレクトリの中に格納されており、gulp のタスクを実行すると `dist` に出力されます。
+
 ~~~~
 .
 ├── README.md
@@ -59,54 +66,56 @@ Basically source file placed in `src/`. It passed to `dist/` as destination thro
         │   └── _module-sprite.scss
         └── style.scss
 
-~~~~
+~~~~ 
 
-## Usage
+## 使い方
 
-1.  Install gulp.
+1.  gulp をインストールします。
 
-		$ npm install -g gulp
+        $ npm install -g gulp
 
-2.  Install some dependencies.
+2.  必要な gulp のプラグインは `package.json` に記述しているので、それらを `npm install` で一括インストールします。
+    お使いの環境によっては `sudo` を付ける必要があります。
 
-		$ cd path/to/directory ; npm install
-	
-3.  Install sass-globbing.
+        $ cd path/to/directory ; npm install
+    
+3.  sass-globbing が入っていない人はインストールしてください。
 
-		$ gem install sass-globbing
+        $ gem install sass-globbing
 
-4.  Run gulp.
+4.  gulp を実行します。
 
-		$ gulp
-
+        $ gulp
 
 ### autoprefix
 
-You'd like to autoprefix specific browsers, open gulpfile and edit `.pipe(autoprefixer())` line.
+autoprefix のブラウザを指定する場合は、`gulpfile.js` の `.pipe(autoprefixer())` を編集してください。
 
 >
-	.pipe($.autoprefixer("last 2 version"))
+    .pipe($.autoprefixer("last 2 version"))
 
 
-reference : [https://github.com/postcss/autoprefixer](https://github.com/postcss/autoprefixer)
+参考 : [https://github.com/postcss/autoprefixer](https://github.com/postcss/autoprefixer)
 
 
-### Connect with local server
+### ローカルサーバーとの接続
 
-If you'd like to connect "brower-sync" with local server, edit `gulpfile.js`.
+BrowserSync をローカルサーバと接続する場合、`gulpfile.js` を以下のように編集して下さい。
 
-1. Set hostname on line 23.
+1. 23行目にホスト名を記述します。
 
-	>
-		'vhost': 'example.dev'
+    >
+        'vhost': 'example.dev'
 
-2. Uncomment below these lines.
+2. 下記の記述のコメントアウトを解除してください。
 
-	>
-		// Local server
-		// gulp.task('browser-sync', function() {
-		// 		browserSync({
-		// 			proxy: paths.vhost,
-		// 			open: 'external'
-		// 		});
-		// });
+    >
+        // Local server
+        // gulp.task('browser-sync', function() {
+        //      browserSync({
+        //          proxy: paths.vhost,
+        //          open: 'external'
+        //      });
+        // });
+
+参考 : [http://www.browsersync.io/](http://www.browsersync.io/) 
